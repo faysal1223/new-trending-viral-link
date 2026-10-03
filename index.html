@@ -1,0 +1,442 @@
+<script src="https://pl25019989.profitableratecpmnetwork.com/84/fb/33/84fb33ac533ddcb8925ca51cfb832d9c.js"></script>
+
+<script>
+  atOptions = {
+    'key' : 'd986916de4c798e9a35de933e01a0875',
+    'format' : 'iframe',
+    'height' : 300,
+    'width' : 160,
+    'params' : {}
+  };
+</script>
+<script src="https://www.highrevenueformat.com/d986916de4c798e9a35de933e01a0875/invoke.js"></script>
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Video Site</title>
+    <style>
+        /* --- Global Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #0f0f0f;
+            color: #ffffff;
+        }
+
+        /* --- Header & Nav --- */
+        header {
+            background-color: #212121;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff0000;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .search-bar {
+            display: flex;
+            background-color: #121212;
+            border: 1px solid #333;
+            border-radius: 20px;
+            overflow: hidden;
+            width: 40%;
+            max-width: 400px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 8px 15px;
+            border: none;
+            background: transparent;
+            color: white;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 8px 20px;
+            background-color: #222;
+            border: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #333;
+        }
+
+        /* --- Video Grid --- */
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+
+        /* --- Video Card --- */
+        .video-card {
+            background-color: #1a1a1a;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s;
+            border: 1px solid #222;
+        }
+
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(255,0,0,0.2);
+        }
+
+        .thumbnail-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16/9;
+            background-color: #000;
+            overflow: hidden;
+        }
+
+        .thumbnail-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-info {
+            padding: 12px;
+        }
+
+        .video-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .channel-name {
+            font-size: 14px;
+            color: #aaa;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .channel-name::before {
+            content: "✔";
+            color: #aaa;
+            font-size: 10px;
+        }
+
+        /* --- Modal for Playing Video --- */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        .modal-content {
+            width: 100%;
+            max-width: 900px;
+            background-color: #000;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .modal video {
+            width: 100%;
+            max-height: 70vh;
+            display: block;
+            background-color: #000;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            background: rgba(0,0,0,0.5);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+        }
+
+        .close-btn:hover {
+            background: red;
+        }
+
+        /* --- Download Section in Modal --- */
+        .download-section {
+            padding: 15px;
+            background: #111;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .download-btn {
+            background-color: #ff0000;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #cc0000;
+        }
+
+        /* --- Timer & Link Popup --- */
+        .timer-popup {
+            display: none;
+            background-color: #222;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+            border: 1px solid #444;
+        }
+
+        .timer-text {
+            font-size: 18px;
+            font-weight: bold;
+            color: #ffcc00;
+            margin-bottom: 10px;
+        }
+
+        .download-link {
+            display: none;
+            background-color: #28a745;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .download-link:hover {
+            background-color: #218838;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .video-grid {
+                grid-template-columns: 1fr;
+                padding: 10px;
+            }
+            .search-bar {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header (User Site) -->
+    <header>
+        <div class="logo">
+            ▶ MyVideoSite
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search videos...">
+            <button>🔍</button>
+        </div>
+    </header>
+
+    <!-- Video Grid Container -->
+    <div class="video-grid" id="videoGrid">
+        
+        <!-- =========================================
+        এখান থেকে ভিডিও কার্ড শুরু। 
+        নতুন ভিডিও যোগ করতে নিচের কার্ডটি কপি করে পেস্ট করুন।
+        ========================================= -->
+
+        <!-- Video Card 1 -->
+        <div class="video-card" onclick="playVideo('https://videotourl.com/videos/1791053680795-7f24adf9-06a0-4dae-9655-338c6eab7a34.mp4', 'My First Video', 'My Channel', 'https://videotourl.com/videos/1791053680795-7f24adf9-06a0-4dae-9655-338c6eab7a34.mp4')">
+            <div class="thumbnail-container">
+                <!-- এখানে আপনার পছন্দমতো থাম্বনেইল ছবির লিংক বসাতে পারেন -->
+                <img src="https://i.postimg.cc/sgvpFhxX/Screenshot-2026-10-04-005701.png" alt="Thumb">
+            </div>
+            <div class="video-info">
+                <div class="video-title">My First Video</div>
+                <div class="channel-name">My Channel</div>
+            </div>
+        </div>
+
+        <!-- Video Card 2 -->
+        <div class="video-card" onclick="playVideo('https://videotourl.com/videos/1791053680795-7f24adf9-06a0-4dae-9655-338c6eab7a34.mp4', 'My Second Video', 'My Channel', 'https://videotourl.com/videos/1791053680795-7f24adf9-06a0-4dae-9655-338c6eab7a34.mp4')">
+            <div class="thumbnail-container">
+                <img src="https://via.placeholder.com/640x360/333/fff?text=Video+2" alt="Thumb">
+            </div>
+            <div class="video-info">
+                <div class="video-title">My Second Video</div>
+                <div class="channel-name">My Channel</div>
+            </div>
+        </div>
+
+        <!-- =========================================
+        ভিডিও কার্ড শেষ। 
+        ========================================= -->
+
+    </div>
+
+    <!-- Video Player Modal -->
+    <div class="modal" id="videoModal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeVideo()">&times;</span>
+            <video id="modalVideo" controls autoplay></video>
+            
+            <!-- Download Section -->
+            <div class="download-section">
+                <h3 id="modalTitle" style="margin-bottom: 5px;">Video Title</h3>
+                <p id="modalChannel" style="color: #aaa; font-size: 14px; margin-bottom: 10px;">Channel Name</p>
+                
+                <!-- Download Button -->
+                <button class="download-btn" id="downloadBtn" onclick="startDownloadTimer()">
+                    ⬇️ Download Video
+                </button>
+
+                <!-- Timer & Link Area -->
+                <div class="timer-popup" id="timerPopup">
+                    <div class="timer-text" id="timerText">Please wait 20 seconds...</div>
+                    <a href="#" class="download-link" id="downloadLink" target="_blank">Click Here to Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // বর্তমান ভিডিওর ডাউনলোড লিংক রাখার জন্য ভেরিয়েবল
+        let currentDownloadLink = '';
+
+        // ভিডিও প্লে করার ফাংশন (৪টি প্যারামিটার নেয়: link, title, channel, downloadLink)
+        function playVideo(link, title, channel, downloadLink) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalChannel = document.getElementById('modalChannel');
+
+            // ডাউনলোড সেকশন রিসেট করা
+            currentDownloadLink = downloadLink || link; 
+            document.getElementById('downloadBtn').style.display = 'flex';
+            document.getElementById('timerPopup').style.display = 'none';
+            document.getElementById('downloadLink').style.display = 'none';
+            document.getElementById('downloadLink').href = '#';
+            document.getElementById('timerText').innerText = 'Please wait 20 seconds...';
+
+            // YouTube লিংক চেক করা
+            if (link.includes('youtube.com') || link.includes('youtu.be')) {
+                let videoId = '';
+                if (link.includes('youtu.be/')) {
+                    videoId = link.split('youtu.be/')[1].split('?')[0];
+                } else if (link.includes('watch?v=')) {
+                    videoId = link.split('watch?v=')[1].split('&')[0];
+                }
+                video.src = `https://youtu.be/mUyXUdJUuM8?si=p3dHr8V7fapSLL6X`;
+            } else {
+                // ডাইরেক্ট ভিডিও লিংক
+                video.src = link;
+            }
+
+            // এরর হ্যান্ডেলিং
+            video.onerror = function() {
+                alert("দুঃখিত, ভিডিওটি লোড করা যাচ্ছে না। লিংকটি চেক করে আবার চেষ্টা করুন।");
+                console.log("Video Error: লিংকটি ভুল অথবা সার্ভার ডাউন।");
+            };
+
+            modalTitle.innerText = title;
+            modalChannel.innerText = channel;
+            modal.style.display = 'flex';
+            
+            // ভিডিও লোড এবং প্লে করার চেষ্টা
+            video.load(); 
+            video.play().catch(error => {
+                console.log("Autoplay blocked or video failed to load:", error);
+            });
+        }
+
+        // ভিডিও বন্ধ করার ফাংশন
+        function closeVideo() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            video.pause();
+            video.currentTime = 0;
+            video.src = ''; 
+            modal.style.display = 'none';
+        }
+
+        // ২০ সেকেন্ডের টাইমার শুরু করার ফাংশন
+        function startDownloadTimer() {
+            const downloadBtn = document.getElementById('downloadBtn');
+            const timerPopup = document.getElementById('timerPopup');
+            const timerText = document.getElementById('timerText');
+            const downloadLink = document.getElementById('downloadLink');
+
+            // বাটন লুকানো এবং টাইমার দেখানো
+            downloadBtn.style.display = 'none';
+            timerPopup.style.display = 'block';
+
+            let timeLeft = 20;
+
+            // প্রতি ১ সেকেন্ড পর পর টাইমার আপডেট
+            const interval = setInterval(() => {
+                timeLeft--;
+                timerText.innerText = `Please wait ${timeLeft} seconds...`;
+
+                if (timeLeft <= 0) {
+                    clearInterval(interval);
+                    timerText.innerText = 'Your download is ready!';
+                    
+                    // ডাউনলোড লিংক সেট করা এবং দেখানো
+                    downloadLink.href = currentDownloadLink;
+                    downloadLink.style.display = 'inline-block';
+                }
+            }, 1000);
+        }
+    </script>
+</body>
+</html>
